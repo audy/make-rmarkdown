@@ -1,4 +1,4 @@
-# knitr-make
+# make + rmarkdown
 
 by: Austin G. Davis-Richardson <harekrishna@gmail.com>
 
