@@ -5,7 +5,8 @@ install:
     # install make
     - sudo apt-get update -qq
     - curl -OL http://raw.github.com/craigcitro/r-travis/master/scripts/travis-tool.sh
-    - sh BOOTSTRAP_PANDOC="1" ./travis-tool.sh bootstrap
+    - chmod 755 travis-tool.sh
+    - BOOTSTRAP_PANDOC="1" ./travis-tool.sh bootstrap
 
     # install Rmarkdown
     - echo 'options(repos=c("http://cran.us.r-project.org")); install.packages("rmarkdown")' | sudo R --vanilla --slave
