@@ -2,9 +2,13 @@ language: c
 
 install:
 
-    # install R
+    # install make
     - sudo apt-get update
-    - sudo apt-get install make pandoc
+
+    # install haskell so we can build pandoc
+    - sudo apt-get install haskell-platform
+    - sudo cabal update
+    - sudo cabal install pandoc
 
     # install latest R
     - sudo apt-add-repository -y "deb http://cran.rstudio.com/bin/linux/ubuntu `lsb_release -cs`/"
