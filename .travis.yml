@@ -8,6 +8,10 @@ install:
     - chmod 755 travis-tool.sh
     - BOOTSTRAP_PANDOC="1" ./travis-tool.sh bootstrap
 
+    # check to see if pandoc is there
+    - pandoc --version
+    - which pandoc
+
     # install Rmarkdown
     - echo 'options(repos=c("http://cran.us.r-project.org")); install.packages("rmarkdown")' | sudo R --vanilla --slave
 
