@@ -1,13 +1,14 @@
+language: c
+
 install:
 
-  # install R
-  sudo apt-get update
-  sudo apt-get install make R pandoc
+    # install R
+    - sudo apt-get update
+    - sudo apt-get install make R pandoc
 
-  # install Rmarkdown
-  echo 'options(repos=c("http://cran.us.r-project.org")); install.packages("rmarkdown")' | R --vanilla --slave
+    # install Rmarkdown
+    - echo 'options(repos=c("http://cran.us.r-project.org")); install.packages("rmarkdown")' | R --vanilla --slave
 
-  # TODO: install R project dependencies using Packrat or something
+    # TODO: install R project dependencies using Packrat or something
 
-script:
-  make
+script: make
