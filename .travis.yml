@@ -7,7 +7,7 @@ install:
     - sudo apt-get install make r-base pandoc
 
     # install Rmarkdown
-    - echo 'options(repos=c("http://cran.us.r-project.org")); install.packages("rmarkdown")' | R --vanilla --slave
+    - echo 'options(repos=c("http://cran.us.r-project.org")); install.packages("rmarkdown")' | sudo R --vanilla --slave
 
     # TODO: install R project dependencies using Packrat or something
 
