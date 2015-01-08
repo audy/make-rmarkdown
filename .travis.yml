@@ -4,7 +4,7 @@ install:
 
     # install R
     - sudo apt-get update
-    - sudo apt-get install make R pandoc
+    - sudo apt-get install make R-base pandoc
 
     # install Rmarkdown
     - echo 'options(repos=c("http://cran.us.r-project.org")); install.packages("rmarkdown")' | R --vanilla --slave
