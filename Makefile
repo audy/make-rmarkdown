@@ -3,7 +3,7 @@ TARGETS=$(SOURCES:%.Rmd=%.html)
 
 %.html: %.Rmd
 	@echo "$< -> $@"
-	echo "library(knitr); knitr::knit2html(\"$<\", output=\"$@\")" | R --slave --vanilla --no-save
+	@Rscript -e "rmarkdown::render('$<')"
 
 default: $(TARGETS)
 
