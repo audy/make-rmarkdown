@@ -1,7 +1,11 @@
 SOURCES=$(shell find notebooks -name *.Rmd)
-TARGETS=$(SOURCES:%.Rmd=%.html)
+TARGETS=$(SOURCES:%.Rmd=%.pdf)
 
 %.html: %.Rmd
+	@echo "$< -> $@"
+	@Rscript -e "rmarkdown::render('$<')"
+
+%.pdf: %.Rmd
 	@echo "$< -> $@"
 	@Rscript -e "rmarkdown::render('$<')"
 
