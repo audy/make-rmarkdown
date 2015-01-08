@@ -34,4 +34,3 @@ output file: notebooks/1-hello-world.html
 ## TODO
 
 - Add Packrat for dependency management/vendoring.
-- Add support for rendering to PDF, markdown, etc...
