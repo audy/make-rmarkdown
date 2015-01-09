@@ -1,5 +1,7 @@
 # make + rmarkdown
 
+![travis-ci](https://travis-ci.org/audy/make-rmarkdown.svg)
+
 by: Austin G. Davis-Richardson <harekrishna@gmail.com>
 
 Example of using knitR + Make + RMarkdown for minimally replicable scientific
