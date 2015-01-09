@@ -12,8 +12,9 @@ install:
     - pandoc --version
     - which pandoc
 
-    # install Rmarkdown
-    - echo 'options(repos=c("http://cran.us.r-project.org")); install.packages("rmarkdown")' | sudo R --vanilla --slave
+    # install Rmarkdown (from HEAD)
+    - echo 'options(repos=c("http://cran.us.r-project.org")); install.packages("devtools")' | sudo R --vanilla --slave
+    - echo 'library(devtools); install.packages("rmarkdown")' | sudo R --vanilla --slave
 
     # TODO: install R project dependencies using Packrat or something
 
