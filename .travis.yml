@@ -12,10 +12,6 @@ install:
     - sudo apt-add-repository -y ppa:marutter/c2d4u
     - sudo apt-get install pandoc pandoc-citeproc
 
-    # check to see if pandoc is there
-    - pandoc --version
-    - which pandoc
-
     # install Rmarkdown
     - echo 'options(repos=c("http://cran.us.r-project.org")); install.packages("rmarkdown")' | sudo R --vanilla --slave
 
