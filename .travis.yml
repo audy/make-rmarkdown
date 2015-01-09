@@ -6,7 +6,11 @@ install:
     - sudo apt-get update -qq
     - curl -OL http://raw.github.com/craigcitro/r-travis/master/scripts/travis-tool.sh
     - chmod 755 travis-tool.sh
-    - BOOTSTRAP_PANDOC="1" ./travis-tool.sh bootstrap
+    - ./travis-tool.sh bootstrap
+
+    # install pandoc
+    - sudo apt-add-repository -y ppa:marutter/c2d4u
+    - sudo apt-get install pandoc pandoc-citeproc
 
     # check to see if pandoc is there
     - pandoc --version
