@@ -14,7 +14,7 @@ install:
 
     # install Rmarkdown (from HEAD)
     - echo 'options(repos=c("http://cran.us.r-project.org")); install.packages("devtools")' | sudo R --vanilla --slave
-    - echo 'library(devtools); install_github("rstudio/rmarkdown")' | sudo R --vanilla --slave
+    - echo 'options(repos=c("http://cran.us.r-project.org")); library(devtools); install_github("rstudio/rmarkdown")' | sudo R --vanilla --slave
 
     # TODO: install R project dependencies using Packrat or something
 
