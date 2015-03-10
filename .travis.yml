@@ -1,2 +1,4 @@
-language: r
+language: c
 script: make
+r_packages:
+  - rmarkdown
