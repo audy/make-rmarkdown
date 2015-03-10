@@ -1,20 +1,2 @@
-language: c
-
-install:
-
-    # install make
-    - sudo apt-get update -qq
-    - curl -OL http://raw.github.com/craigcitro/r-travis/master/scripts/travis-tool.sh
-    - chmod 755 travis-tool.sh
-    - ./travis-tool.sh bootstrap
-
-    # install pandoc
-    - sudo apt-add-repository -y ppa:marutter/c2d4u
-    - sudo apt-get install pandoc pandoc-citeproc
-
-    # install Rmarkdown
-    - echo 'options(repos=c("http://cran.us.r-project.org")); install.packages("rmarkdown")' | sudo R --vanilla --slave
-
-    # TODO: install R project dependencies using Packrat or something
-
+language: r
 script: make
