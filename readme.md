@@ -17,7 +17,7 @@ computing. Use this as a skeleton for new R projects.
 
 You should see something like:
 
-```
+```bash
 $ make
 notebooks/1-hello-world.Rmd -> notebooks/1-hello-world.html
 echo "library(knitr); knit(\"notebooks/1-hello-world.Rmd\", \"notebooks/1-hello-world.html\")" | R --slave --vanilla --no-save
@@ -31,6 +31,14 @@ processing file: notebooks/1-hello-world.Rmd
 output file: notebooks/1-hello-world.html
 
 [1] "notebooks/1-hello-world.html"
+```
+
+Or, using Docker:
+
+```bash
+$ docker build --tag myrproject
+
+$ docker run myrproject
 ```
 
 ## TODO
