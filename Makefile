@@ -3,11 +3,11 @@ TARGETS=$(SOURCES:%.Rmd=%.pdf)
 
 %.html: %.Rmd
 	@echo "$< -> $@"
-	@rscript -e "rmarkdown::render('$<')"
+	@Rscript -e "rmarkdown::render('$<')"
 
 %.pdf: %.Rmd
 	@echo "$< -> $@"
-	@rscript -e "rmarkdown::render('$<')"
+	@Rscript -e "rmarkdown::render('$<')"
 
 default: $(TARGETS)
 
